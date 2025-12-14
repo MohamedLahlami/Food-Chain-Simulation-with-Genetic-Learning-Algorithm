@@ -72,8 +72,8 @@ function mouseDragged() {
 function draw() {
   background(0);
 
-  // Apparition aléatoire de nourriture (20% de chances)
-  if (random(1) < 0.2) {
+  // Apparition aléatoire de nourriture (15% de chances)
+  if (random(1) < 0.15) {
     const x = random(width);
     const y = random(height);
     food.push(createVector(x, y));
@@ -165,10 +165,12 @@ function draw() {
   text("Bears: " + bears.length, 10, 70);
   text("Food: " + food.length, 10, 90);
 
-  // DNA du meilleur individu de chaque espèce
-  displayBestDNA("Bunny", bunnies, 110);
-  displayBestDNA("Fox", foxes, 130);
-  displayBestDNA("Bear", bears, 150);
+  if (true) {
+    //if (debug.checked()) {
+    displayBestDNA("Bunny", bunnies, 110);
+    displayBestDNA("Fox", foxes, 130);
+    displayBestDNA("Bear", bears, 150);
+  }
 }
 
 // Fonction helper pour afficher le DNA du meilleur individu d'une espèce
@@ -189,6 +191,8 @@ function displayBestDNA(speciesName, population, yPos) {
       textSize(12);
       text(
         speciesName +
+          "MAX HEALTH: " +
+          maxHealth.toFixed(2) +
           " DNA: " +
           bestAnimal.dna.map((n) => n.toFixed(2)).join(", "),
         10,
