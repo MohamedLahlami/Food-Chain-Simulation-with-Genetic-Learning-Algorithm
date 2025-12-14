@@ -165,8 +165,8 @@ function draw() {
   text("Bears: " + bears.length, 10, 70);
   text("Food: " + food.length, 10, 90);
 
-  if (true) {
-    //if (debug.checked()) {
+  // if (true) {
+  if (debug.checked()) {
     displayBestDNA("Bunny", bunnies, 110);
     displayBestDNA("Fox", foxes, 130);
     displayBestDNA("Bear", bears, 150);
@@ -191,7 +191,7 @@ function displayBestDNA(speciesName, population, yPos) {
       textSize(12);
       text(
         speciesName +
-          "MAX HEALTH: " +
+          "\nMAX HEALTH: " +
           maxHealth.toFixed(2) +
           " DNA: " +
           bestAnimal.dna.map((n) => n.toFixed(2)).join(", "),
