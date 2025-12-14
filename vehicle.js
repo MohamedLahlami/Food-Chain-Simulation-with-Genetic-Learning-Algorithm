@@ -325,7 +325,7 @@ class Bunny extends Animal {
     //TODO: experiment
     //bunnies start hungry
     this.health = 0.6;
-    this.reproductionRate = 0.005; // 0.5% per frame = ~30% per second
+    this.reproductionRate = 0.015; // 0.15% per frame = ~9% per second
 
     // Configuration spécifique aux lapins (slowest, but agile)
     this.maxspeed = 3.5;
@@ -371,7 +371,7 @@ class Fox extends Animal {
 
     //experiment
     this.health = 0.7; // Start with moderate health
-    this.reproductionRate = 0.002; // 0.2% per frame = ~12% per second
+    this.reproductionRate = 0.01; // 1% per frame = ~60% per second
 
     // Configuration spécifique aux renards (faster than bunnies)
     this.maxspeed = 4;
@@ -412,7 +412,7 @@ class Bear extends Animal {
 
     //experiment
     this.health = 0.8; // Start with good health
-    this.reproductionRate = 0.001; // 0.1% per frame = ~6% per second
+    this.reproductionRate = 0.01; // 1% per frame = ~60% per second
 
     // Configuration spécifique aux ours (fastest but less agile)
     this.maxspeed = 5; // Fastest
